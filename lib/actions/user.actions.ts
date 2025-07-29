@@ -14,7 +14,7 @@ export async function signInWithCredentials(
       password: formData.get("password"),
     });
 
-    await signIn("credentisl", user);
+    await signIn("credentials", user);
 
     return { success: true, message: "Signed in succesfully" };
   } catch (error) {
