@@ -139,7 +139,7 @@ export async function getMyCart() {
     items: cart.items as CartItem[],
     itemsPrice: cart.itemsPrice.toString(),
     totalPrice: cart.totalPrice.toString(),
-    shippingsPrice: cart.shippingPrice.toString(),
+    shippingPrice: cart.shippingPrice.toString(),
     taxPrice: cart.taxPrice.toString(),
   });
 }
