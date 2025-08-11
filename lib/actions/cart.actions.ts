@@ -8,7 +8,6 @@ import { prisma } from "@/db/prisma";
 import { cartItemsSchema, insertCartSchema } from "../validators";
 import { revalidatePath } from "next/cache";
 import { Prisma } from "@prisma/client";
-import { success } from "zod";
 
 // Calculate cart prices
 const calcPrice = (item: CartItem[]) => {
@@ -27,7 +26,7 @@ const calcPrice = (item: CartItem[]) => {
   };
 };
 
-export async function addItemToCart(data: CartItem) {
+export async function AddItemToCart(data: CartItem) {
   try {
     // Check for cart cookie
     const sessionCartId = (await cookies()).get("sessionCartId")?.value;
