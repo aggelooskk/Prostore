@@ -177,7 +177,7 @@ const OrderDetailsTable = ({
                 <div>{formatCurrency(totalPrice)}</div>
               </div>
               {/* PayPal Payment */}
-              {!isPaid && paymentMethod === "PayPal" && (
+              {!isPaid && paymentMethod === "Paypal" && (
                 <div>
                   <PayPalScriptProvider options={{ clientId: paypalClientId }}>
                     <PrintLoadingState />
