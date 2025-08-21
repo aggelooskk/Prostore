@@ -79,6 +79,8 @@ const OrderDetailsTable = ({
     }
   };
 
+  console.log(paypalClientId)
+
   return (
     <>
       <h1 className="py-4 text-2xl">Order {formatId(id)}</h1>
