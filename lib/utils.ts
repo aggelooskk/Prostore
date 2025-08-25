@@ -33,7 +33,7 @@ export function formatError(error: any) {
     error.code === "P2002"
   ) {
     // Handle Prisma error
-    const field = error.meta?.target ? error.meta.target(0) : "Field";
+    const field = error.meta?.target ? error.meta.target[0] : "Field";
     return `${field.charAt(0).toUppercase() + field.slice(1)} Already Exists`;
   } else {
     // Handle other errors
