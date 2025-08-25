@@ -13,12 +13,15 @@ import { BadgeDollarSign, Barcode, CreditCard, Users } from "lucide-react";
 import Link from "next/link";
 import { auth } from "@/auth";
 import Charts from "./charts";
+import { requireAdmin } from "@/lib/auth-guard";
 
 export const metadata = {
   title: "Admin Dashboard",
 };
 
 const AdminOverviewPage = async () => {
+  await requireAdmin();
+
   const session = await auth();
   console.log(session);
 
