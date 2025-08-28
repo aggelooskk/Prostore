@@ -12,7 +12,6 @@ import {
 export type Product = z.infer<typeof insertProductSchema> & {
   id: string;
   rating: string;
-  images: string[];
   createdAt: Date;
 };
 
