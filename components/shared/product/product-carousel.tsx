@@ -13,7 +13,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const ProductCarousel = ({ data }: { data: Product[] }) => {
-      console.log("ProductCarousel mounted, data:", data); 
   return (
     <Carousel
       className="w-full mb-12"
