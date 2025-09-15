@@ -5,6 +5,7 @@ import {
   getLatestProducts,
 } from "@/lib/actions/product.actions";
 import { Metadata } from "next";
+import ViewAllProductsButton from "@/components/view-all-products-button";
 
 export const metadata: Metadata = {
   title: `Home`,
@@ -20,6 +21,7 @@ const Homepage = async () => {
         <ProductCarousel data={featuredProducts} />
       )}
       <ProductList data={latestProducts} title="Newest Arrivals" />
+      <ViewAllProductsButton />
     </>
   );
 };
