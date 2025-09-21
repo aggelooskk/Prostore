@@ -15,12 +15,20 @@ const ReviewList = ({
 }) => {
   const [reviews, setReviews] = useState<Review[]>([]);
 
+  const reload = () => {
+    console.log(`object`);
+  };
+
   return (
     <>
       <div className="space-y-4">
         {reviews.length === 0 && <div>No Reviews Yet</div>}
         {userId ? (
-          <ReviewForm userId={userId} productId={productId} />
+          <ReviewForm
+            userId={userId}
+            productId={productId}
+            onReviewSubmitted={reload}
+          />
         ) : (
           <div>
             Please
@@ -33,9 +41,7 @@ const ReviewList = ({
             to write a review
           </div>
         )}
-        <div className="flex col gap-3">
-            {/* REVIEWS */}
-        </div>
+        <div className="flex col gap-3">{/* REVIEWS */}</div>
       </div>
     </>
   );
