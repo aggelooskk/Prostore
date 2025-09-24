@@ -246,7 +246,7 @@ const OrderDetailsTable = ({
               )}
 
               {/* Stripe Payment */}
-              {!isPaid && paymentMethod === "stripe" && stripeClientSecret && (
+              {!isPaid && paymentMethod === "Stripe" && stripeClientSecret && (
                 <StripePayment
                   priceInCents={Number(order.totalPrice) * 100}
                   orderId={order.id}
@@ -255,7 +255,7 @@ const OrderDetailsTable = ({
               )}
 
               {/* Cash on Delivery */}
-              {isAdmin && !isPaid && paymentMethod === "CashOnDelivery" && (
+              {isAdmin && !isPaid && paymentMethod === "Cash On Delivery" && (
                 <MarkAsPaidButton />
               )}
               {isAdmin && isPaid && !isDelivered && <MarkAsDeliveredButton />}
